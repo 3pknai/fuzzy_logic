@@ -1,0 +1,9 @@
+count=4
+НМ1
+НМ3
+НМ5
+НМ4
+fs=trimf:-10 20 30
+fo=intr;trimf:-10 20 30;trimf:-5 15 45
+fo=unif;intr;trimf:-10 20 30;trimf:-5 15 45;trimf:-15 0 5
+fs=trimf:-15 0 5

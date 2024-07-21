@@ -1,0 +1,11 @@
+count=5
+НМ4
+НМ1
+НМ2
+Пересечение_НМ1_И_НМ2
+Объединение
+fs=gaussmf:10.0 15.0
+fs=trapmf:10.0 25.0 45.0 50.0
+fs=gaussmf:10.0 25.0
+fo=intr;trapmf:10.0 25.0 45.0 50.0;gaussmf:10.0 25.0
+fo=unif;gaussmf:10.0 15.0;intr;trapmf:10.0 25.0 45.0 50.0;gaussmf:10.0 25.0

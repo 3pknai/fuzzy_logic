@@ -1,0 +1,40 @@
+[General information]
+NumInputs=2
+NumOutputs=1
+NumRules=7
+
+[Input0]
+Name=Температура
+Range=-10 40
+UnitOfMeasure=°C
+NumMFs=3
+MF0=Холодно:trapmf:-15 -10 0 10
+MF1=Тепло:trimf:5 15 25
+MF2=Жарко:trapmf:20 30 40 45
+
+[Input1]
+Name=Желаемая температура
+Range=-10 40
+UnitOfMeasure=°C
+NumMFs=3
+MF0=Холодно:trapmf:-15 -10 0 10
+MF1=Тепло:trimf:5 15 25
+MF2=Жарко:trapmf:20 30 40 45
+
+[Output0]
+Name=Действие
+Range=-1 1
+UnitOfMeasure=
+NumMFs=3
+MF0=Охлаждение:trapmf:-1.5 -1 -0.5 0
+MF1=Ничего:trimf:-0.5 0 0.5
+MF2=Отопление:trapmf:0 0.5 1 1.5
+
+[Rules]
+0:0,0:1,2:0;AND;1.0
+0:0,0:0,1:0;AND;1.0
+0:1,0:0,0:0;AND;1.0
+1:0,1:0,1:0;AND;1.0
+2:0,2:0,1:0;AND;1.0
+2:0,2:1,0:0;AND;1.0
+2:1,2:0,2:0;AND;1.0
